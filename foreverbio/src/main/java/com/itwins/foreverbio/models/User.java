@@ -2,16 +2,18 @@ package com.itwins.foreverbio.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name="users")
 public class User {
 	
 	@Id
 	private int id;
 	private String email;
-	private String firstName;
-	private String lastName;
+	private String firstname;
+	private String lastname;
 	private int age;
 	private String password;
 	
@@ -19,11 +21,11 @@ public class User {
 	
 	
 	
-	public User(String email, String firstName, String lastName, int age, String password) {
+	public User(String email, String firstname, String lastname, int age, String password) {
 		super();
 		this.email = email;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.firstname = firstname;
+		this.lastname = lastname;
 		this.age = age;
 		this.password = password;
 	}
@@ -40,16 +42,16 @@ public class User {
 		this.email = email;
 	}
 	public String getFirstName() {
-		return firstName;
+		return firstname;
 	}
 	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+		this.firstname = firstName;
 	}
 	public String getLastName() {
-		return lastName;
+		return lastname;
 	}
 	public void setLastName(String lastName) {
-		this.lastName = lastName;
+		this.lastname = lastName;
 	}
 	public int getAge() {
 		return age;
@@ -65,7 +67,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName + ", age="
+		return "User [id=" + id + ", email=" + email + ", firstName=" + firstname + ", lastName=" + lastname + ", age="
 				+ age + ", password=" + password + "]";
 	}
 	
